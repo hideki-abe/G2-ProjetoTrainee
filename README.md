@@ -19,15 +19,15 @@ Implementação
   ○ Cadastro do usuário;
   ○ Home, exibida somente quando o usuário está autenticado;
   ○ Perfil do usuário, na qual ele pode alterar sua foto;
-  ● No cadastro, o usuário deve informar um e-mail válido e sua senha, que serão
+  - No cadastro, o usuário deve informar um e-mail válido e sua senha, que serão
  guardados no banco de dados. Se possível, salve a senha na forma de um hash
 (sugestão: utilize bcrypt). Não é boa prática guardar senhas diretamente no
 banco de dados. Também, é preciso que o novo usuário informe seu nome e,
 opcionalmente, faça um upload de uma imagem para seu perfil;
-  ● Ao realizar o login, o usuário, já cadastrado, deverá inserir seu e-mail e sua
+  - Ao realizar o login, o usuário, já cadastrado, deverá inserir seu e-mail e sua
 senha de acesso.
-  ● Na página home (exibida somente para usuários autenticados), você deve
+  - Na página home (exibida somente para usuários autenticados), você deve
 consumir uma API de sua escolha e exibir dados na tela.
-  ● Na página do usuário, devem ser mostradas as informações nome, e-mail, de
+  - Na página do usuário, devem ser mostradas as informações nome, e-mail, de
 forma travada (inalterável) e a foto do usuário, com a opção de alterar ou
 inserir foto.
