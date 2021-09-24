@@ -2,18 +2,18 @@
 Projeto trainee EloJr
 Participantes: Lucas Hideki, Paulo Vitor e Pedro Henrique
 
-  O projeto a ser desenvolvido consiste em uma aplicação web de
+- O projeto a ser desenvolvido consiste em uma aplicação web de
 funcionalidades simples, porém desafiadoras para iniciantes, e tem como objetivo
 capacitar os candidatos a implementarem funcionalidades básicas de uma aplicação,
 como autenticação (login), operações em bancos de dados e consumo de APIs
 externas ao sistema.
-  Os usuários dessa aplicação deverão se cadastrar fornecendo nome, e-mail,
+- Os usuários dessa aplicação deverão se cadastrar fornecendo nome, e-mail,
 senha e, opcionalmente, uma foto de perfil. Após o cadastro, o usuário pode fazer
 login usando o e-mail e senha informados. Depois de logado na aplicação, a
 criatividade de vocês entra em cena: são livres para implementar a funcionalidade
 que quiserem (boa hora para usar alguma API para fazer qualquer coisa).
 Implementação
-A aplicação final deverá ser seguir os seguintes critérios:
+- A aplicação final deverá ser seguir os seguintes critérios:
   ● Quatro páginas:
   ○ Login do usuário;
   ○ Cadastro do usuário;
