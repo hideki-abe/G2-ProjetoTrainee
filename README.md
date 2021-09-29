@@ -1,6 +1,6 @@
 # G2-ProjetoTrainee
 Projeto trainee EloJr
--> Participantes: Lucas Hideki, Paulo Vitor e Pedro Henrique
+-> Participantes: Lucas Hideki(hideki-abe), Paulo Vitor(paulog22) e Pedro Henrique(ph-aquino)
 
 - O projeto a ser desenvolvido consiste em uma aplicação web de
 funcionalidades simples, porém desafiadoras para iniciantes, e tem como objetivo
