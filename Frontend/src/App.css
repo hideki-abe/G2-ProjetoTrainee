@@ -64,4 +64,76 @@
     color: white;
     font-family: 'Lato';
     font-size: 16px;
+    transition: 0.2s;
+}
+
+.navigation .header-link li:hover{
+    color: #d4d4d4;
+}
+
+.top-anime-container{
+    display: flex;
+    font-family:'Lato';
+}
+
+.top-anime-container aside{
+    flex: 1 1 150px;
+    max-width: 20%;
+    min-width: 150px;
+}
+
+.top-anime-container aside nav{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+h3{
+    color: black;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+
+
+.top-anime-container aside nav a{
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+
+    background-color: #eee;
+    text-decoration: none;
+    border-radius: 60px;
+
+    color: rgb(69, 69, 69);
+    font-size: 100%;
+    margin-bottom: 4px;
+
+    transition: 0.4s;
+}
+
+
+@media (max-width: 768px) {
+    .top-anime-container aside{
+        flex: 1 1 150px;
+        max-width: 80%;
+        min-width: 150px;
+    }
+    
+}
+@media (max-width: 768px) {
+    .top-anime-container aside nav a{
+        padding: 8px 16px 8px 20px;
+        margin-left: 25%;
+    }
+}
+@media (max-width: 768px) {
+    .top-anime-container aside nav h3{
+        text-align: center;
+        margin-left: 25%;
+    }
+}
+
+.top-anime-container aside nav a:hover{
+    background-color: rgb(59, 59, 59);
+    color: #eee;
 }
