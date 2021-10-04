@@ -2,7 +2,7 @@ import React from 'react'
 
 function TopList({ topAnime }) {
     return (
-        <div>
+        <div class="top-anime-container">
             <aside>
                 <nav>
                     <h3>Top Anime</h3>
