@@ -3,8 +3,8 @@
 *{
     margin: 0;
     padding: 0;
-    list-style: none;
-    text-decoration: none;
+    box-sizing: border-box;
+
     font-family: 'Lato';
 }
 
@@ -78,8 +78,7 @@
 
 .content-wrap aside{
     flex: 1 1 150px;
-    max-width: 20%;
-    min-width: 100px;
+    max-width: 250px;
 }
 
 .content-wrap aside nav{
@@ -87,13 +86,12 @@
     padding-right: 16px;
 }
 
-h3{
-    color: black;
+.content-wrap aside nav h3{
+    color: rgb(59, 59, 59);
+    font-size: 24px;
     margin-top: 16px;
     margin-bottom: 16px;
 }
-
-
 
 .content-wrap aside nav a{
     display: block;
@@ -105,8 +103,8 @@ h3{
     border-radius: 60px;
 
     color: rgb(69, 69, 69);
-    font-size: 100%;
-    margin-bottom: 4px;
+    font-size: 16px;
+    margin-bottom: 6px;
 
     transition: 0.4s;
 }
@@ -123,12 +121,12 @@ h3{
 
 .content-wrap main .main-head{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .content-wrap main .main-head .search-box{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     flex: 1 1 0%;
 }
 
@@ -141,7 +139,7 @@ h3{
     margin-top: 16px;
     display: block;
     width: 100%;
-    max-width: 80%;
+    max-width: 50%;
     padding: 16px;
     border-radius: 60px;
     background-color: #eee;
@@ -162,13 +160,13 @@ h3{
     display: flex;
     flex-wrap: wrap;
     margin-top: 32px;
-    margin: 32px -8px 0px;
+    margin: 32px -8px 8px;
 }
 
 .content-wrap main .anime-list .anime-card{
     flex: 1 1 33.333%;
     max-width: 33.333%;
-    padding: 16px 0px;
+    padding: 16px 8px;
 }
 
 .content-wrap main .anime-list .anime-card a{
@@ -183,7 +181,7 @@ h3{
 .content-wrap main .anime-list .anime-card figure img{
     display: block;
     width: 100%;
-    height: 450px;
+    height: 100%;
     object-fit: cover;
     border-radius: 16px;
     box-shadow: 0 0 0 rgba(0,0,0, 0.15);
