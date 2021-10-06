@@ -3,7 +3,6 @@
 *{
   font-family: "Lato";
 }
-
 .login-page {
   width: 360px;
   padding: 8% 0 0;
@@ -19,6 +18,7 @@
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
 .form h3{
   margin-bottom: 20px;
 }

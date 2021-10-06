@@ -14,6 +14,7 @@ export default function Cadastro() {
                     <p class="message">
                         Já registrado? 
                         <a href="../Login"> Logue aqui.</a>
+
                     </p>
                 </form>
             </div>
