@@ -5,7 +5,7 @@ function TopList({ topAnime }) {
         <aside>
             <nav>
                 <h3>Top Anime</h3>
-                {topAnime.length === 0 ? "" :
+                {typeof topAnime == undefined ? "" :
                 topAnime.map(anime => (
                     <a
                         href={anime.url}
