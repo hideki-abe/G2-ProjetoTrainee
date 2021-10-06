@@ -5,7 +5,8 @@ function TopList({ topAnime }) {
         <aside>
             <nav>
                 <h3>Top Anime</h3>
-                {topAnime.map(anime => (
+                {typeof topAnime == undefined ? "" :
+                topAnime.map(anime => (
                     <a
                         href={anime.url}
                         target='_blank'

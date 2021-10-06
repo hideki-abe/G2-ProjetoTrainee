@@ -6,9 +6,9 @@ function AnimeCard({anime}) {
                 target="_blank"
                 rel="noreferrer">
                 <figure>
-                    <img 
+                    <img
                         src={anime.image_url}
-                        alt="Anime Image" />
+                        alt={anime.title}/>
                 </figure>
                 <h3>{ anime.title }</h3>
             </a>

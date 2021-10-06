@@ -1,27 +1,25 @@
-import AnimeCard from "./AnimeCard"
+import { useEffect } from "react"
+import SearchBox from "./SearchBox"
+import ListAnime from "./ListAnime"
 
 function MainContent(props) {
+
+    useEffect(() => {
+        console.log(props.animeList);
+    }, [props.animeList])
+
     return (
         <main>            
-            <div className="main-head">
-                <form 
-                    className="search-box"
-                    onSubmit={props.HandleSearch}>
-                    <input
-                        type="search"
-                        placeholder="Pesquise seu anime aqui..."
-                        required 
-                        value={props.search}
-                        onChange={e => props.SetSearch(e.target.value)}/>
-                </form>
-            </div>
-            <div className="anime-list">
-                {props.animeList.map(anime => (
-                    <AnimeCard
-                        anime={anime}
-                        key={anime.mal_id} />
-                ))}
-            </div>
+            <SearchBox                 
+                HandleSearch={props.HandleSearch}
+                search={props.search}
+                SetSearch={props.SetSearch}
+                />
+
+            <ListAnime
+                animeList={props.animeList}
+                />
+            
         </main>
 
     )
