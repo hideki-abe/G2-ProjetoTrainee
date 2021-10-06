@@ -6,6 +6,7 @@ export default function Login() {
         <div class="login-page">
             <div class="form">
                 <form class="login-form">
+                    <h3>Logue em sua conta</h3>
                     <input type="text" placeholder="Username"/>
                     <input type="password" placeholder="Senha"/>
                     <button>login</button>

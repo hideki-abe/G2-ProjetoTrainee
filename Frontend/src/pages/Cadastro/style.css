@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 .cadastro-page {
   width: 360px;
@@ -14,9 +14,13 @@
   padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+}
+.form h3{
+  margin-bottom: 20px;
 }
 .form input {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato";
   outline: 0;
   background: #f2f2f2;
   width: 100%;
@@ -25,9 +29,14 @@
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
+  transition: 0.2s;
+}
+.form input:focus {
+  background-color: rgb(59, 59, 59);
+  color: #eee;
 }
 .form button {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato";
   text-transform: uppercase;
   outline: 0;
   background: #2e51a2;
