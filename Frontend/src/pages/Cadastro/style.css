@@ -30,7 +30,7 @@
   box-sizing: border-box;
   font-size: 14px;
   transition: 0.2s;
-  
+}
 .form input:focus {
   background-color: rgb(59, 59, 59);
   color: #eee;
