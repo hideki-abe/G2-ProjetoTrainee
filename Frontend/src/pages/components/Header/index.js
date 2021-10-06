@@ -10,7 +10,7 @@ function Header() {
 
                 <ul className="navigation">
                     <Link className="header-link" to='/'><li>Home</li></Link>
-                    <Link className="header-link" to='/profile'><li>Perfil</li></Link>
+                    <Link className="header-link" to='/login'><li>Login</li></Link>
                 </ul>
             </div>
         </div>

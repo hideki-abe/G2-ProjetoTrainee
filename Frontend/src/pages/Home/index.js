@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import TopList from "./TopList";
 import MainContent from "./MainContent";
+import './style.css'
 
 function Home() {
     const [animeList, SetAnimeList] = useState([]);
