@@ -1,16 +1,12 @@
 package com.projeto.g2.modelo;
 
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
-
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -28,8 +24,6 @@ public class Usuario implements UserDetails{
 	private String email;
 	private String senha;
 	
-//	@ManyToMany(fetch = FetchType.EAGER)
-//	private List<Perfil> perfis = new ArrayList<>();
 
 	@Override
 	public int hashCode() {
