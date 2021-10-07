@@ -5,7 +5,6 @@ import ListAnime from "./ListAnime"
 function MainContent(props) {
 
     useEffect(() => {
-        console.log(props.animeList);
     }, [props.animeList])
 
     return (

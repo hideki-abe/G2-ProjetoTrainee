@@ -1,6 +1,14 @@
 import {Link} from 'react-router-dom'
+import { useContext } from 'react'
+import { AuthContext } from '../../../contexts/Auth'
 
 function Header() {
+    const { signed, logOut } = useContext(AuthContext);
+
+    async function handleLogout(){
+        await logOut();
+    }
+
     return (
         <div className="header">
             <div className="inner_header">
@@ -9,8 +17,10 @@ function Header() {
                 </div> 
 
                 <ul className="navigation">
-                    <Link className="header-link" to='/'><li>Home</li></Link>
-                    <Link className="header-link" to='/login'><li>Login</li></Link>
+                    {signed ? 
+                    <Link className="header-link" to='/profile'><li>Perfil</li></Link> 
+                    : <Link className="header-link" to='/login'><li>Login</li></Link>}
+                    {signed ? <span className="header-link"><li onClick={handleLogout}>Logout</li></span> : ''}
                 </ul>
             </div>
         </div>
