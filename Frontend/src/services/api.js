@@ -1,9 +1,5 @@
-function api() {
-    
-    
-    return (
+import axios from 'axios';
 
-    )
-}
-
-export default api
+export const api = axios.create({
+    baseURL: 'https://localhost:3333'
+})

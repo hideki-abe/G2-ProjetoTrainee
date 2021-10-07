@@ -1,9 +1,13 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
+import { AuthContext } from "../../contexts/Auth";
 import TopList from "./TopList";
 import MainContent from "./MainContent";
 import './style.css'
 
 function Home() {
+
+    const{ user } = useContext(AuthContext);
+    console.log(user);
     const [animeList, SetAnimeList] = useState([]);
     const [topAnime, SetTopAnime] = useState([]);
     const [search, SetSearch] = useState("");
@@ -39,14 +43,18 @@ function Home() {
     }, [])
 
     return (
-        <div className="content-wrap">
-            <TopList topAnime={topAnime}/>
-            <MainContent
-                HandleSearch={HandleSearch}
-                search={search}
-                SetSearch={SetSearch}
-                animeList={animeList} />
+        <div className="page-content">
+            <h2>Bem vindo <strong>{user.email}.</strong> Pesquise animes abaixo para encontrá-los no MyAnimeList. <br/><span>Dica: comece por seu anime favorito!</span></h2>
+            <div className="content-wrap">
+                <TopList topAnime={topAnime}/>
+                <MainContent
+                    HandleSearch={HandleSearch}
+                    search={search}
+                    SetSearch={SetSearch}
+                    animeList={animeList} />
+            </div>
         </div>
+        
     )
 }
 

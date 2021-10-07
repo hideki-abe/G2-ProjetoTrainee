@@ -8,6 +8,20 @@
 	font-family: 'Lato';
 }
 
+.page-content h2{
+    text-align: center;
+    margin: 16px;
+    font-weight: normal;
+}
+
+.page-content h2 strong{
+    color: #2e51a2;
+}
+
+.page-content h2 span{
+    font-size: 80%;
+    color: rgb(130, 130, 130);
+}
 
 .content-wrap{
     display: flex;
@@ -92,6 +106,23 @@
 .content-wrap main .main-head .search-box input:focus, .content-wrap main .main-head .search-box input:focus{
     background-color: rgb(59, 59, 59);
     color: #eee;
+}
+
+.content-wrap main .main-head .search-box button {
+    vertical-align: middle;
+    margin-top: 16px;
+    margin-left: 8px;
+    text-align: center;
+    border-radius: 2px;
+    border-color: rgb(59, 59, 59);
+
+    transition: 0.2s
+}
+
+.content-wrap main .main-head .search-box button:hover {
+    background-color:rgb(59, 59, 59);
+    color:#eee;
+    border-color: #eee;
 }
 
 .content-wrap main .anime-list{

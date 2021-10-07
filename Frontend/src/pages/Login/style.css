@@ -61,7 +61,7 @@
   color: #b3b3b3;
   font-size: 12px;
 }
-.form .message a {
+.form .message .link-login {
   color: #2e51a2;
   text-decoration: none;
 }
