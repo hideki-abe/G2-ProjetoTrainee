@@ -8,7 +8,7 @@ export default function AuthProvider({ children }){
 
     useEffect(() => {
         function loadStorage() {
-            const storageUser = localStorage.getItem('@Anime-Sagasu.user');
+            const storageUser = localStorage.getItem('@Anime-Sagasu:user');
             const storageToken = localStorage.getItem('@Anime-Sagasu:token');
             if (storageUser && storageToken) {
                 setUser(JSON.parse(storageUser))
