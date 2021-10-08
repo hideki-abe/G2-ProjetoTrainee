@@ -74,7 +74,7 @@ export default function Cadastro() {
                         type="text" 
                         placeholder="Email"
                         onChange={e => setEmail(e.target.value)}/>
-                    <button onClick={handleRegister}> registrar </button>
+                    <button type="button" onClick={handleRegister}> registrar </button>
                     <p className="message">
                         Já registrado? 
                         <Link className='link-register' to ='/login'> Logue aqui.</Link>

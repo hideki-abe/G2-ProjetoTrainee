@@ -55,7 +55,7 @@ export default function Login() {
                         type="password" 
                         placeholder="Senha"
                         onChange={e => setSenha(e.target.value)}/>
-                    <button onClick={handleLogin}>login</button>
+                    <button type="button" onClick={handleLogin}>login</button>
                     <p className="message">
                         Sem cadastro? 
                         <Link className='link-login' to ='/cadastro'> Crie uma conta</Link>
