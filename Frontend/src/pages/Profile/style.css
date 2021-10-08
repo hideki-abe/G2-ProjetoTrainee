@@ -1,0 +1,27 @@
+
+
+.profile-display{
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+}
+
+.profile-display h1{
+    margin-bottom: 20px;
+    color: #2e51a2;
+}
+.profile-display h2{
+    margin-bottom: 20px;
+}
+.profile-display h2 span, .profile-display ul b, .profile-display .link{
+    color: #2e51a2;
+}
+.profile-display .link:hover{
+    color: #97a7ce;
+}

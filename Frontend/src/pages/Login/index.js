@@ -15,15 +15,17 @@ export default function Login() {
         //checa se a senha ou o usuario nao estao em branco
         if(senha.length <= 0 || email.length <= 0)
         {
-            //display um erro na pagina = senha e email em branco
+            alert("Erro: Email e/ou senha estão em branco.")
             isValid = false;
         }
-
-        //checa se o email e valido
-
         //checa se a senha possui mais que 8 caracteres
         if(senha.length > 8){
-            //display um erro na pagina = senha muito longa
+            alert("Erro: Senha muito longa. Máximo de 8 caracteres.")
+            isValid = false;
+        }
+        //checa se o email possui mais que 32 caracteres
+        if(email.length > 254){
+            alert("Erro: Email muito longo ou inválido.")
             isValid = false;
         }
 
@@ -48,7 +50,7 @@ export default function Login() {
                         type="text" 
                         placeholder="E-mail"
                         onChange={e => setEmail(e.target.value)}/>
-                    <label>Senha</label>
+                    <label>Senha[até 8 caracteres]</label>
                     <input 
                         type="password" 
                         placeholder="Senha"

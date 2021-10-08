@@ -5,56 +5,51 @@ export const AuthContext = createContext({})
 
 export default function AuthProvider({ children }){
     const [user, setUser] = useState(null);
-    //axios.post({name: 'd' password:'adw'})
 
     useEffect(() => {
         function loadStorage() {
-            const storageUser = localStorage.getItem(
-                '@Anime-Sagasu.user'
-            )
-            if (storageUser) {
+            const storageUser = localStorage.getItem('@Anime-Sagasu.user');
+            const storageToken = localStorage.getItem('@Anime-Sagasu:token');
+            if (storageUser && storageToken) {
                 setUser(JSON.parse(storageUser))
+                api.defaults.headers.Authorization = `Bearer ${storageToken}`;
             }
         }
 
         loadStorage()
     }, [])
 
-    function storageUser(data) {
-        localStorage.setItem('@Anime-Sagasu.user', JSON.stringify(data))
+    function storageUser(response) {
+        localStorage.setItem('@Anime-Sagasu:user', JSON.stringify(response.data.user))
+        localStorage.setItem('@Anime-Sagasu:token', response.data.token)
     }
 
     async function signIn(userData){
         
-        //const response = await api.post('/login', userData)
-        const response = userData;
+        const response = await api.post('/login', userData)
+
         if(response){
-            setUser(response)
+            setUser(response.data.user)
+            api.defaults.headers.Authorization = `Bearer ${response.data.token}`
             storageUser(response) 
-        }
-  
-        
+        } 
     }
     async function signUp(userData){
-        //registrar
-        //const response = await api.post('/cadastro', userData)
-        const response = userData;
+ 
+        const response = await api.post('/cadastro', userData)
+
         if(response){
-            setUser(response)
+            setUser(response.data.user)
+            api.defaults.headers.Authorization = `Bearer ${response.data.token}`
             storageUser(response)
         }
-   
-
-        //usar o axios pra mandar todas as informacoes do novo usuario ao backend.
-        //se der td ok, setUser(u) e storageUser(u) [logar]
     }
     async function logOut(){
-        //deslogar, talvez mandando uma mensagem pro back???
 
         setUser(null);
-        localStorage.removeItem(`@Anime-Sagasu.user`);
-       // storageUser(null)  ou   tirar do localStorage o usuario carregado de alguma maneira
-       // 
+        localStorage.removeItem(`@Anime-Sagasu:user`);
+        localStorage.removeItem(`@Anime-Sagasu:token`);
+
     }
     return (
         <AuthContext.Provider

@@ -5,7 +5,7 @@ function ListAnime({animeList}) {
 
         return(
             <div className="anime-list">
-                {typeof animeList == 'undefined' ? console.log("A magia aconteceu.") :
+                {typeof animeList == 'undefined' ? console.log("503: Serviço Indisponível") :
                 animeList.map(anime => (
                 <AnimeCard
                     anime={anime}
