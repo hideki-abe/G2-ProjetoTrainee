@@ -29,7 +29,12 @@ export default function AuthProvider({ children }){
         const response = await api.post('/login', userData)
 
         if(response){
-            setUser(response.data.user)
+            const agroupedUser = {
+                username: response.data.username,
+                email: response.data.user
+            }
+            response.data.user = agroupedUser
+            setUser(agroupedUser)
             api.defaults.headers.Authorization = `Bearer ${response.data.token}`
             storageUser(response) 
         } 
