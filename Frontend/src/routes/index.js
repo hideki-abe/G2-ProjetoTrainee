@@ -18,6 +18,7 @@ function Routes() {
                 <Route exact path = "/cadastro" component = {Cadastro} />
                 <Route exact path = "/profile" isPrivate component = {Profile} />
                 <Route path='*' component = {Error} />
+                <Route path='*' isPrivate component = {Error} />
             </Switch>
         </BrowserRouter>
     )

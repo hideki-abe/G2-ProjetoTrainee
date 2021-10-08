@@ -7,7 +7,6 @@ import './style.css'
 function Home() {
 
     const{ user } = useContext(AuthContext);
-    console.log(user);
     const [animeList, SetAnimeList] = useState([]);
     const [topAnime, SetTopAnime] = useState([]);
     const [search, SetSearch] = useState("");

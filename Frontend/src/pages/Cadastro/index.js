@@ -62,7 +62,7 @@ export default function Cadastro() {
                     <label>Nome[até 20 caracteres]</label>
                     <input 
                         type="text" 
-                        placeholder="Nome"
+                        placeholder="Ex: Luigi Santana Mobis"
                         onChange={e => setUserName(e.target.value)}/>
                     <label>Senha[até 8 caracteres]</label>
                     <input 
