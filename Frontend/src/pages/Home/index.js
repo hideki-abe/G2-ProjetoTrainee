@@ -44,7 +44,7 @@ function Home() {
 
     return (
         <div className="page-content">
-            <h2>Bem vindo <strong>{user.email}.</strong> Pesquise animes abaixo para encontrá-los no MyAnimeList. <br/><span>Dica: comece por seu anime favorito!</span></h2>
+            <h2>Bem vindo <strong>{user.username}.</strong> Pesquise animes abaixo para encontrá-los no MyAnimeList. <br/><span>Dica: comece por seu anime favorito!</span></h2>
             <div className="content-wrap">
                 <TopList topAnime={topAnime}/>
                 <MainContent
