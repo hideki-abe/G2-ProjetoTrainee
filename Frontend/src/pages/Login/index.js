@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Login() {
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [senha, setSenha] = useState('');
 
     const { signIn } =  useContext(AuthContext)
 
@@ -13,7 +13,7 @@ export default function Login() {
         let isValid = true;
 
         //checa se a senha ou o usuario nao estao em branco
-        if(password.length <= 0 || email.length <= 0)
+        if(senha.length <= 0 || email.length <= 0)
         {
             //display um erro na pagina = senha e email em branco
             isValid = false;
@@ -22,7 +22,7 @@ export default function Login() {
         //checa se o email e valido
 
         //checa se a senha possui mais que 8 caracteres
-        if(password.length > 8){
+        if(senha.length > 8){
             //display um erro na pagina = senha muito longa
             isValid = false;
         }
@@ -31,7 +31,7 @@ export default function Login() {
         if (isValid) {
             await signIn({
                 email: email,
-                password: password
+                senha: senha
         })
         }
         
@@ -52,7 +52,7 @@ export default function Login() {
                     <input 
                         type="password" 
                         placeholder="Senha"
-                        onChange={e => setPassword(e.target.value)}/>
+                        onChange={e => setSenha(e.target.value)}/>
                     <button onClick={handleLogin}>login</button>
                     <p className="message">
                         Sem cadastro? 
