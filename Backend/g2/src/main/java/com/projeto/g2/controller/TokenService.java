@@ -29,7 +29,7 @@ public class TokenService {
 		
 		
 		return Jwts.builder()
-				.setIssuer("API do forum da alura")
+				.setIssuer("API DE LOGIN")
 				.setSubject(logado.getId().toString())
 				.setIssuedAt(hoje)
 				.setExpiration(dataExpiracao)

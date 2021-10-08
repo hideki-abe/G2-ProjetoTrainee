@@ -13,8 +13,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.projeto.g2.controller.TokenService;
 import com.projeto.g2.repository.UsuarioRepository;
@@ -23,7 +21,7 @@ import com.projeto.g2.repository.UsuarioRepository;
 
 @EnableWebSecurity
 @Configuration
-public class SecurityConfigurations extends WebSecurityConfigurerAdapter implements WebMvcConfigurer{
+public class SecurityConfigurations extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
 	private AutenticacaoService autenticacaoService;	
@@ -33,11 +31,6 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter impleme
 	
 	@Autowired
 	private UsuarioRepository usuarioRepository;
-	
-	public void addCorsMapping(CorsRegistry registry) {
-		registry.addMapping("/**")
-			.allowedOrigins("*")
-			.allowedMethods("GET","POST","PUT","DELETE","OPTIONS","HEAD","TRACE","CONNECT");}
 	
 	
 	@Override
@@ -60,10 +53,9 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter impleme
 		http.authorizeRequests()
 		.antMatchers(HttpMethod.POST, "/login").permitAll()
 		.anyRequest().authenticated()
-		.and().cors().and().csrf().disable()
+		.and().csrf().disable()
 		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-		.and().addFilterBefore(new AutenticacaoViaTokenFilter(tokenService, usuarioRepository), UsernamePasswordAuthenticationFilter.class)
-;
+		.and().addFilterBefore(new AutenticacaoViaTokenFilter(tokenService, usuarioRepository), UsernamePasswordAuthenticationFilter.class);
 	}
 	
 	@Override

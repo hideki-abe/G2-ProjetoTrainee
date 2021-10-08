@@ -1,5 +1,7 @@
 package com.projeto.g2.controller;
 
+import java.util.Optional;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.projeto.g2.controller.dto.TokenDto;
 import com.projeto.g2.controller.form.LoginForm;
+import com.projeto.g2.modelo.Usuario;
+import com.projeto.g2.repository.UsuarioRepository;
 
 
 
@@ -30,6 +34,8 @@ public class AutenticacaoController {
 	@Autowired
 	private TokenService tokenService;
 	
+	private UsuarioRepository usuarioRepository;
+	
 	@PostMapping
 	public ResponseEntity<TokenDto> autenticar(@RequestBody @Valid LoginForm form){
 		UsernamePasswordAuthenticationToken dadosLogin = form.converter();
@@ -37,7 +43,14 @@ public class AutenticacaoController {
 		try {
 			Authentication authentication = authManager.authenticate(dadosLogin);
 			String token = tokenService.gerarToken(authentication);
-			return ResponseEntity.ok(new TokenDto(token, "Bearer"));
+			String email = (String) dadosLogin.getPrincipal();
+
+			
+			
+			
+			
+			
+			return ResponseEntity.ok(new TokenDto(token, "Bearer", email, "teste"));
 		} catch (AuthenticationException e) {
 			return ResponseEntity.badRequest().build();
 		}
