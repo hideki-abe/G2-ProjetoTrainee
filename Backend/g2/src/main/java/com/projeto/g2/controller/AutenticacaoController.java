@@ -19,7 +19,7 @@ import com.projeto.g2.controller.form.LoginForm;
 
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/login")
 public class AutenticacaoController {
 	
 	@Autowired
