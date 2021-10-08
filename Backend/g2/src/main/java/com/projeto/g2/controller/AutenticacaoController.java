@@ -34,6 +34,7 @@ public class AutenticacaoController {
 	@Autowired
 	private TokenService tokenService;
 	
+	@Autowired
 	private UsuarioRepository usuarioRepository;
 	
 	@PostMapping
@@ -46,11 +47,11 @@ public class AutenticacaoController {
 			String email = (String) dadosLogin.getPrincipal();
 
 			
+			Optional<Usuario> usuario = usuarioRepository.findByEmail(email);
 			
 			
 			
-			
-			return ResponseEntity.ok(new TokenDto(token, "Bearer", email, "teste"));
+			return ResponseEntity.ok(new TokenDto(token, "Bearer", email, usuario.get().getNome()));
 		} catch (AuthenticationException e) {
 			return ResponseEntity.badRequest().build();
 		}

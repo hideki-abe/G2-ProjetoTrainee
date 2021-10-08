@@ -1,6 +1,5 @@
 package com.projeto.g2.controller.dto;
 
-import java.util.Optional;
 
 public class TokenDto {
 	
@@ -11,10 +10,10 @@ public class TokenDto {
 	private String username;
 	
 	
-	public TokenDto(String token, String tipo, String user, String username) {
+	public TokenDto(String token, String tipo, String email, String username) {
 		this.token = token;
 		this.tipo = tipo;
-		this.email = user;
+		this.email = email;
 		this.username = username;
 	}
 
