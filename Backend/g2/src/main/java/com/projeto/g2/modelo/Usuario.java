@@ -23,7 +23,7 @@ public class Usuario implements UserDetails{
 	private String nome;
 	private String email;
 	private String senha;
-	
+		
 
 	@Override
 	public int hashCode() {
